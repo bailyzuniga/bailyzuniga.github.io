@@ -25,8 +25,13 @@ github_username:  bailyzuniga
 # Build settings
 markdown: kramdown
 theme: minima
+sass:
+    sass_dir: _sass
+    style: compressed
 gems:
   - jekyll-feed
+  - susy
+  - octopress-autoprefixer
 exclude:
   - Gemfile
   - Gemfile.lock
