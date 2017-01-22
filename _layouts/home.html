@@ -2,25 +2,6 @@
 layout: default
 ---
 
-<div class="wrapper">
-
-  {{ content }}
-
-
-  <div class="justified-grid">
-    {% if site.posts.size == 0 %}
-
-    {% else %}
-      {% for post in site.posts %}
-        <a class="panel-post-link" href="{{ post.url | relative_url }}">
-          <div class="panel" style="background-image:url({{ post.image | relative_url }});">
-            <div class="title">
-              <div>{{ post.title }}</div>
-            </div>
-          </div>
-        </a>
-      {% endfor %}
-    {% endif %}
-  </div>
-
-</div>
+{% include blurb.html %}
+{% include portfolio.html %}
+{% include contact.html %}

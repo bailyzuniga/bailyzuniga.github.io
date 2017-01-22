@@ -1,0 +1,34 @@
+<script>
+// Smooth scroll for in page links
+// credit: http://wibblystuff.blogspot.com/2014/04/in-page-smooth-scroll-using-css3.html
+$(function(){
+    var target, scroll;
+
+    $('a[href*="#"]:not([href="#"])').on("click", function(e) {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            target = $(this.hash);
+            target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
+
+            if (target.length) {
+                e.preventDefault();
+                pageHeight = $(".page-content").height();
+                pos = $(".page-content").scrollTop();
+
+                var avail = $(".page-content").prop('scrollHeight') - pageHeight;
+
+                scroll = target[0].offsetTop;
+                time = 1000.0 * Math.abs(scroll - pos) / pageHeight
+
+                if (scroll > avail) {
+                    scroll = avail;
+                }
+
+                $(".page-content").animate({
+                        scrollTop: scroll
+                    }, time);
+                return;
+            }
+        }
+    });
+});
+</script>
