@@ -1,0 +1,37 @@
+.site-nav {
+    position: fixed;
+    z-index: 200;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    text-align: right;
+    .nav-list {
+        .section-link {
+            display: block;
+            color: $font-color-light;
+            opacity: 0.6;
+            .section-title {
+                visibility: hidden;
+            }
+            &:hover {
+                opacity: 0.8;
+                color: $font-color-light;
+                .section-title {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+@media only screen
+  and (max-device-width: 767px) {
+    .site-nav {
+        background-color: transparent;
+        right: 0;
+        top: 0;
+    }
+}
