@@ -1,12 +1,15 @@
-<section id="blurb">
-    <div class="v-center">
-        <div class="wrapper">
-            <p class="section-intro">{{ site.description | escape }}</p>
+<section id="blurb" class="parallax__group">
+    <div class="parallax__layer back"></div>
+    <div class="section-wrapper">
+        <div class="v-center">
+            <div class="wrapper">
+                <p class="section-intro">{{ site.description | escape }}</p>
+            </div>
         </div>
+        <a class="next-link" href="#portfolio">
+            <div class="scroll-down">
+                <img class="center" src="/assets/chevron-white.svg"/>
+            </div>
+        </a>
     </div>
-    <a class="next-link" href="#portfolio">
-        <div class="scroll-down">
-            <img class="center" src="/assets/chevron-white.svg"/>
-        </div>
-    </a>
 </section>

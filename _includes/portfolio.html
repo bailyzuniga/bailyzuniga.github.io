@@ -1,20 +1,23 @@
-<section id="portfolio">
-    <div class="wrapper">
-        <h2 class="section-title">Portfolio</h2>
-    </div>
-    <div class="wrapper">
-        {% if site.posts.size == 0 %}
+<section id="portfolio" class="parallax__group">
+    <div class="parallax__layer back"></div>
+    <div class="section-wrapper">
+        <div class="wrapper">
+            <h2 class="section-title">Portfolio</h2>
+        </div>
+        <div class="wrapper">
+            {% if site.posts.size == 0 %}
 
-        {% else %}
-            {% for post in site.posts %}
-                <div class="panel" style="background-image:url({{ post.image | relative_url }});">
-                    <a class="panel-post-link" href="{{ post.url | relative_url }}">
-                        <div class="title">
-                            <div>{{ post.title }}</div>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        {% endif %}
+            {% else %}
+                {% for post in site.posts %}
+                    <div class="panel" style="background-image:url({{ post.image | relative_url }});">
+                        <a class="panel-post-link" href="{{ post.url | relative_url }}">
+                            <div class="title">
+                                <div>{{ post.title }}</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 </section>
