@@ -1,0 +1,11 @@
+- id: blurb
+  content_url: blurb.html
+
+- id: portfolio
+  content_url: portfolio.html
+
+- id: about
+  content_url: about.html
+
+- id: contact
+  content_url: contact.html
