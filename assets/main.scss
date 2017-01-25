@@ -19,7 +19,7 @@ body {
     height: 100%;
     font-family: $base-sans;
     font-weight: 100;
-    background-color: $palette-0;
+    background-color: $palette-3;
     color: $font-color-light;
 }
 
@@ -52,7 +52,6 @@ section, .post {
 }
 
 section {
-    min-height: 100%;
     .section-title {
         text-align: left;
         font-weight: 100;
@@ -128,18 +127,18 @@ section {
 }
 
 #portfolio {
-    background-color: $palette-2;
+    background-color: #302A31;
     // .parallax__layer.back {
     //     background-image: url(/assets/rotations/building-diagrams.jpg);
     // }
 }
 
 #about {
-    // background-color: $palette-3;
+    background-color: $palette-2;
 }
 
 #contact {
-    background-color: $palette-3;
+    background-color: $palette-4;
     .email-link {
         color: $font-color-light;
         &:hover {
@@ -150,7 +149,7 @@ section {
 }
 
 footer {
-    background-color: $palette-3;
+    background-color: $palette-4;
 }
 
 .copyright {
@@ -163,6 +162,7 @@ a:hover {
 }
 
 .post-header {
+    margin-top: 1.8em;
     h1 {
         font-weight: 200;
     }

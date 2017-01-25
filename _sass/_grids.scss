@@ -74,6 +74,19 @@ $susy: (
     }
 }
 
+.gallery {
+    padding-bottom: gutter(12);
+    padding-top: gutter(12);
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
 @media only screen
   and (max-device-width: 767px) {
     .wrapper {
