@@ -2,6 +2,11 @@
 layout: default
 ---
 
-{% include blurb.html %}
-{% include portfolio.html %}
-{% include contact.html %}
+{% for sec in site.data.sections %}
+    <section id="{{sec.id}}" class="parallax__group">
+        <div class="parallax__layer back"></div>
+        <div class="section-wrapper">
+            {% include {{sec.content_url}} %}
+        </div>
+    </section>
+{% endfor %}
