@@ -7,20 +7,20 @@ layout: default
       <img src="/assets/home.svg"/>
     </div>
   </a>
-  <header class="post-header">
+  <header class="post-header section-wrapper">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content section-wrapper" itemprop="articleBody">
     {{ content }}
   </div>
 
   {% if site.posts.size == 0 %}
 
   {% else %}
-    <h2 class="other-projects">Other projects</h2>
-    <div class="gallery">
+    <h2 class="other-projects section-wrapper">Other projects</h2>
+    <div class="gallery section-wrapper">
     {% for post in site.posts %}
       {% if post.title != page.title %}
         <div class="panel" style="background-image:url({{ post.image | relative_url }});">

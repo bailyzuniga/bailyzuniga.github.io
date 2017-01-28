@@ -2,7 +2,6 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minima";
 @import "branding";
 @import "grids";
 @import "navbar";
@@ -92,9 +91,7 @@ section {
     position: absolute;
     width: 100%;
     top: 50%;
-    div {
-        transform: translate(0, -50%);
-    }
+    transform: translate(0, -50%);
 }
 
 .home-link {
@@ -154,6 +151,8 @@ footer {
 
 .copyright {
     text-align: center;
+    margin: 0;
+    padding: 1em;
 }
 
 a:hover {

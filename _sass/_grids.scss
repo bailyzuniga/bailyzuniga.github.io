@@ -12,7 +12,7 @@ $susy: (
 
 .wrapper {
     @include container;
-
+    width: 90%;
     .panel {
         @include gallery(4 of 12);
         &:nth-last-child(-n + 3) {
@@ -88,10 +88,25 @@ $susy: (
 }
 
 @media only screen
-  and (max-device-width: 767px) {
+  and (max-width: 767px) {
     .wrapper {
         .panel {
-            @include span(12)
+            @include gallery(6 of 12);
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only screen
+  and (max-width: 479px) {
+    .wrapper {
+        .panel {
+            @include gallery(12 of 12);
+            &:nth-last-child(-n + 1) {
+                margin-bottom: 0;
+            }
         }
     }
 }
